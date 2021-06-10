@@ -311,10 +311,14 @@ Now let's fetch the push commands for 'mymvcweb' repository and execute the foll
 
 
 ```
-aws ecr get-login --no-include-email --region us-east-1
+aws ecr get-login-password --region us-east-1
 ```
 
+Use the password AWS response and run the command below:
 
+```
+docker login -u AWS -p AWSPasswordresponse https://yourawsaccountnumber.dkr.ecr.us-east-1.amazonaws.com
+```
 
 It should return you the docker login command with token. Copy the Docker login with tokens and execute.
 
